@@ -3,7 +3,8 @@
  */
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
-  "appId": "YourAppID",
+  "appId": "com.startsi.selfservice.navigator",
+  productName: '出入境系统导航',
   "asar": true,
   "directories": {
     "output": "release/${version}"

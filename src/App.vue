@@ -6,9 +6,15 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div> <h1>{{ '请根据要办理的业务进入对应的程序。' }}</h1></div>
   <div style="display: flex;">
-    <HelloWorld name="程序1" icon="/src/assets/electron.svg" exe="F:\Fiddler\Fiddler.exe" />
-    <HelloWorld name="程序2" icon="/src/assets/vite.svg" exe="aaa" />
-    <HelloWorld name="程序3" icon="/src/assets/vue.svg" exe="aaa" />
+    <HelloWorld name="程序1" exe="F:\Fiddler\Fiddler.exe">
+       <img src="./assets/electron.svg" class="logo electron" alt="程序1" />
+    </HelloWorld>
+    <HelloWorld name="程序2" exe="aaa">
+      <img src="./assets/vite.svg" class="logo electron" alt="程序2" />
+    </HelloWorld>
+    <HelloWorld name="程序3" exe="aaa" >
+      <img src="./assets/vue.svg" class="logo electron" alt="程序3" />
+    </HelloWorld>
   </div>
   
 </template>

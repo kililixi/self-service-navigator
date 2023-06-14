@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ipcRenderer } from 'electron'
-defineProps<{ name: string, exe: string, icon: string }>()
+const props = defineProps<{ name: string, exe: string, icon: string }>()
+
+//<slot></slot>const imageUrl = new URL(props.icon, import.meta.url).href
 
 const run = (exe:string) => {
   ipcRenderer.send('run', exe)
@@ -9,7 +11,7 @@ const run = (exe:string) => {
 
 <template>
   <div class="app" @click="run(exe)">
-    <img :src="icon" class="logo electron" :alt="name" />
+    <slot></slot>
     <span>{{ name }}</span>
   </div>
 
